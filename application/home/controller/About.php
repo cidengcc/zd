@@ -13,6 +13,5 @@ class About extends Base
         $b = $a->select();
         $this->assign('b',$b);
         return $this->fetch();
-
     }
 }

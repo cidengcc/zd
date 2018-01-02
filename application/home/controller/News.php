@@ -3,17 +3,15 @@ namespace app\home\controller;
 
 use     think\Db;
 use       think\Controller;
+use     app\common\model;
 
-class Index extends Base
+class News extends Base
 {
     public function index()
     {
-        $gongsi = Db::name('about')->where('aboutID',1)->find();
-        //dump($a);
-        $this->assign('gongsi',$gongsi);
+        $a  = new \app\home\model\About();
+        $b = $a->select();
+        $this->assign('b',$b);
         return $this->fetch();
-
     }
-
-
 }

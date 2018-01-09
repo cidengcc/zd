@@ -14,4 +14,8 @@ class About extends Base
         $this->assign('b',$b);
         return $this->fetch();
     }
+    public function honor()
+    {
+        return $this->fetch();
+    }
 }
